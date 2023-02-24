@@ -20,8 +20,8 @@ class Sms_lib {
         $from = $this->CI->config->item('msg_src');
         $response = false;
 
-        if (!empty($password) && !empty($phone) && !empty($text) && !empty($from)) {
-            $ch = curl_init('https://gateway.sms77.io/api/sms');
+        if (!empty($password) && !empty($to) && !empty($text) && !empty($from)) {
+            $ch = curl_init('https://gateway.seven.io/api/sms');
             $options = [
                 CURLOPT_HTTPHEADER => [
                     'Accept: application/json',
@@ -39,5 +39,3 @@ class Sms_lib {
         return $response;
     }
 }
-
-?>
