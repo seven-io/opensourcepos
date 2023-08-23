@@ -26,6 +26,7 @@ class Sms_lib {
                 CURLOPT_HTTPHEADER => [
                     'Accept: application/json',
                     'Content-Type: application/json',
+                    'SentWith: OSPOS',
                     'X-Api-Key: ' . $password,
                 ],
                 CURLOPT_POSTFIELDS => json_encode(compact('from', 'text', 'to')),
